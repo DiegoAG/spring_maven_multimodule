@@ -1,13 +1,10 @@
 package com.altia.formacion.spring.caballero;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	Knight k = new DamselRescuingKnight();
+    	k.embarkOnQuest();
     }
 }
