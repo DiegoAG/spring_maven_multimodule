@@ -1,10 +1,10 @@
-package com.altia.formacion.spring.sistemasonido;
+package com.altia.formacion.spring.sistemasonido.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+@ComponentScan("com.altia.formacion.spring.sistemasonido")
 public class CDPlayerConfig {
 
 }
