@@ -10,9 +10,12 @@ public class App {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(CDPlayerConfig.class);
 
+		MediaPlayer mp = context.getBean(CDPlayer.class);
+		mp.play();
+
 		CompactDisc cd = (CompactDisc)context.getBean("lonelyHeartsClub");
 		cd.play();
-
+		
 		ClassPathXmlApplicationContext contextXml = 
 				new ClassPathXmlApplicationContext("META-INF/beans.xml");
 
