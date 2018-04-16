@@ -1,9 +1,6 @@
 package com.altia.formacion.spring.sistemasonido;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class CDPlayer implements MediaPlayer {
 
 	//@Autowired
@@ -19,7 +16,7 @@ public class CDPlayer implements MediaPlayer {
 //		this.cd = cd;
 //	}
 	
-	@Autowired(required=false)
+	//@Autowired(required=false)
 	public void insertDisc(CompactDisc cd) {
 		this.cd = cd;
 	}

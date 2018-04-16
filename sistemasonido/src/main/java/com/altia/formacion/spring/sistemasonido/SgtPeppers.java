@@ -1,8 +1,6 @@
 package com.altia.formacion.spring.sistemasonido;
 
-import org.springframework.stereotype.Component;
-
-@Component("lonelyHeartsClub")
+//@Component("lonelyHeartsClub")
 public class SgtPeppers implements CompactDisc {
 
 	private String title = "Sgt. Pepper's Lonely Hearts Club Band";
