@@ -19,7 +19,13 @@ public class App {
 		ClassPathXmlApplicationContext contextXml = 
 				new ClassPathXmlApplicationContext("META-INF/beans.xml");
 
-		CompactDisc cd2 = contextXml.getBean(SgtPeppers.class);
+		CompactDisc cd2 = (CompactDisc)contextXml.getBean("compactDisc");
 		cd2.play();
+		
+		MediaPlayer mp2 = (MediaPlayer)contextXml.getBean("cdPlayer");
+		mp2.play();
+		
+		CompactDisc cd3 = (CompactDisc)contextXml.getBean("vacio");
+		cd3.play();
 	}
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
@@ -9,6 +10,30 @@
 	http://www.springframework.org/schema/context/spring-context.xsd
 	">
 
-	<context:component-scan 
-		base-package="com.altia.formacion.spring.sistemasonido" />
+	<bean id="compactDisc" 
+		class="com.altia.formacion.spring.sistemasonido.SgtPeppers" />
+
+	<bean id="cdPlayer"
+		class="com.altia.formacion.spring.sistemasonido.CDPlayer"
+		c:_-ref="compactDisc">
+		<!--  <constructor-arg ref="compactDisc" />-->
+	</bean>
+	
+	<bean id="vacio"
+		class="com.altia.formacion.spring.sistemasonido.BlankDisc">
+		<!-- c:title="Tarkus" c:artist="Emerson, Lake &amp; Palmer">-->
+		<constructor-arg value="Tarkus" />
+		<constructor-arg value="Emerson, Lake &amp; Palmer"/>
+		<constructor-arg>
+			<!-- <null/> -->
+			<list>
+				<value>Eruption</value>
+				<!-- <ref bean="alsdkjflakdsj" /> -->
+				<value>Pista2</value>
+				<value>Pista3</value>
+				<value>Are you ready Eddy?</value>
+			</list>
+		</constructor-arg>
+	</bean>
+		
 </beans>
