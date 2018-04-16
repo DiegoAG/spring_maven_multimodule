@@ -8,7 +8,7 @@ public class App {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(CDPlayerConfig.class);
 
-		CompactDisc cd = context.getBean(SgtPeppers.class);
+		CompactDisc cd = (CompactDisc)context.getBean("lonelyHeartsClub");
 		cd.play();
 
 		ClassPathXmlApplicationContext contextXml = 
